@@ -1,0 +1,20 @@
+{
+  "name": "santa-cruz-management-app",
+  "version": "1.0.0",
+  "description": "Repositorio para aplicacion web movil \"Santa Cruz Management App\"",
+  "main": "server.js",
+  "scripts": {
+    "command": "nodemon --exec node src/server.js"
+  },
+  "author": "Synthsoft",
+  "license": "ISC",
+  "dependencies": {
+    "css-loader": "^6.10.0",
+    "express": "^4.18.3",
+    "html-webpack-plugin": "^5.6.0",
+    "nodemon": "^3.1.0",
+    "style-loader": "^3.3.4",
+    "webpack": "^5.90.3",
+    "webpack-dev-middleware": "^7.0.0"
+  }
+}
