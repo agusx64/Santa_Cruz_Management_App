@@ -1,5 +1,6 @@
-- Para ejecutar el proyecto de debe de ejecutar el siguiente comando en CMD "npm install"
-- Para ejecutar el codigo javascript ejectutar el siguiente comando "nodemon dist"
+- Para ejecutar el proyecto escribir los siguientes comandos
+- npm i express webpack webpack-dev-middleware html-webpack-plugin css-loader style-loader nodemon -d
+
 
 - Para subir un cambio al nodo principal de GitHub se deben de ejecutar los siguientes comandos en este orden
 
