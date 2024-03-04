@@ -1,0 +1,2 @@
+- Para ejecutar el proyecto de debe de ejecutar el siguiente comando en CMD "npm install"
+- Para ejecutar el codigo javascript ejectutar el siguiente comando "nodemon dist"
