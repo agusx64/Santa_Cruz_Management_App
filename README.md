@@ -7,3 +7,9 @@
 - 2 git add .
 - 3 git commit -m "Descripcion breve de la modificacion"
 - 4 git push -u origin main
+
+
+- Para ejecutar el servidor de Node JS debe de ejecutar el siguiente comando
+
+- node src/server.js
+- npm run command
