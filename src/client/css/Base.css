@@ -25,12 +25,16 @@ body{
 }
 
 .NavBtn:hover{
-    fill: var(--DarkBlue);
     color: var(--DarkBlue);
+}
+
+.NavBtn:hover .NavBtnIcon{
+    fill: var(--DarkBlue);
 }
 
 .NavBtnIcon{
     fill: var(--Blue);
     height: 30px;
     width: 30px;
+    transition: all 0.5s ease;
 }
