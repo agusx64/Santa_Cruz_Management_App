@@ -212,7 +212,7 @@ body{
     display: flex;
     background-color: var(--CleanBlue);
     padding: 10px;
-    justify-content: center;
+    justify-content: space-evenly;
     box-shadow: 0px 0px 30px var(--Shadow);
 }
 
