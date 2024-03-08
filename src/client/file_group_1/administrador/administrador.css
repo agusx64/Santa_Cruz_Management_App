@@ -43,7 +43,7 @@ body{
 }
 
 .search_container{
-    margin-top: 14px;
+    margin-top: 30px;
     width: 100%;
     height: 50px;
     display: flex;
@@ -87,17 +87,18 @@ body{
 
 .medical_container{
     width: 100%;
-    height: 130px;
-    margin-top: 30px;
+    height: 160px;
+    margin-top: 20px;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
+    overflow-x: hidden;
 }
 
 .frame_container_medical{
     width: 45%;
-    height: 100%;
+    height: 81%;
     border-radius: 10px;
 }
 
@@ -130,7 +131,7 @@ body{
     font-weight: 500;
     position: relative;
     top: -100px;
-    right: -50px;
+    right: -70px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -152,7 +153,6 @@ body{
     justify-content: space-between;
     align-items: center;
     font-family: "Poppins";
-    font-size: 15px;
     color: #2B6AA9;
     margin-top: 30px;
     width: 85%;
@@ -161,15 +161,20 @@ body{
 
 #section_personal{
     height: 3px;
-    width: 150px;
+    width: 170px;
     background-color: #2B6AA9;
     border-radius: 5px;
 }
 
+#agregate_personal_span{
+    font-size: 18px;
+    font-weight: 500;
+}
+
 .medical_buttons{
-    width: 85%;
+    width: 90%;
     height: auto;
-    margin-top: 15px;
+    margin-top: 25px;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -177,8 +182,8 @@ body{
 }
 
 .medical_buttons_style{
-    width: 70px;
-    height: 70px;
+    width: 85px;
+    height: 85px;
     border-radius: 10px;
     background-color: white;
     border-style: solid;
@@ -188,6 +193,67 @@ body{
 
 .icons_medical_buttons{
     fill: #2B6AA9;
-    width: 25px;
-    height: 25px;
+    width: 36px;
+    height: 36px;
+}
+.icons_medical_buttons:hover{
+    fill: #FEFEFF;
+}
+
+.medical_buttons_style:hover{
+    background-color: #2B6AA9;
+    animation: ease-in-out;
+    transition: 0.4s;
+}
+
+.card_container_patient{
+    border-color: #2B6AA9;
+    border-style: solid;
+    border-width: 2px;
+    width: 90%;
+    height: 130px;
+    margin-top: 21px;
+    margin-bottom: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 15px;
+    padding-left: 15px;
+}
+
+.img_card_container{
+    border-style: solid;
+    border-color: #2B6AA9;
+    border-width: 1px;
+    height: 70%;
+    width: 30%;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#img_account_card{
+    width: 50px;
+    height: 50px;
+    fill: #2B6AA9;
+}
+
+.text_details_patient{
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: start;
+    font-family: "Poppins";
+    color: #2B6AA9;
+}
+.name_patient{
+    font-size: 20px;
+}
+
+.dots{
+    fill: #2B6AA9;
+    width: 40px;
+    height: 40px;
 }
