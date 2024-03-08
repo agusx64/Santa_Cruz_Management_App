@@ -187,7 +187,7 @@ body{
     justify-content: center;
     color: var(--Blue);
     fill: var(--Blue);
-    transition: all 0.5s ease;
+    transition: all 0.2s ease;
     background-color: white;
     border: none;
 }
@@ -200,4 +200,44 @@ body{
 .AddMailBtnIcon{
     width: 40px;
     height: 40px;
+}
+
+.NavigationBarSection{
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+.NavigationBar{
+    display: flex;
+    background-color: var(--CleanBlue);
+    padding: 10px;
+    justify-content: center;
+    box-shadow: 0px 0px 30px var(--Shadow);
+}
+
+.NavBtn{
+    color: var(--Blue);
+    background-color: var(--CleanBlue);
+    border: none;
+    fill: var(--Blue);
+    transition: all 0.2s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.NavBtn:hover{
+    color: var(--DarkBlue);
+}
+
+.NavBtn:hover .NavBtnIcon{
+    fill: var(--DarkBlue);
+}
+
+.NavBtnIcon{
+    fill: var(--Blue);
+    height: 30px;
+    width: 30px;
+    transition: all 0.2s ease;
 }
