@@ -1,5 +1,7 @@
-//Cada archivo CSS que se valla a utilizar se debe de declarar aqui, 
-//para que el servidor pueda leer los estilos :)
-
-//CSS del index principal
-require('../css/style.css');
+// Esperar a que el DOM esté completamente cargado
+document.addEventListener("DOMContentLoaded", function() {
+    function redireccionar() {
+        window.location.href = "/src/client/file_group_1/inicio/inicio.html"; 
+    }
+    setTimeout(redireccionar, 4000);
+  });
