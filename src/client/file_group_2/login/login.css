@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "Poppins";
 }
 
 body{
@@ -25,6 +26,10 @@ body{
     box-sizing: border-box;
 }
 
+.text_container{
+    padding-top: 15px;
+}
+
 #header_text{
     font-weight: 400;
     font-size: 18px;
@@ -42,286 +47,92 @@ body{
     fill: #2B6AA9;
 }
 
-.search_container{
-    margin-top: 30px;
+.div_bar{
     width: 100%;
-    height: 50px;
+    height: auto;
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 30px;
 }
 
-.input_search{
-    background-color: #B0E2F1;
-    width: 95%;
-    height: 100%;
-    border-radius: 10px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-left: 25px;
-    padding-right: 25px;
-}
-
-#input_text{
-    height: 100%;
+.draw_bar{
     width: 70%;
-    border-style: none;
-    background-color: #B0E2F1;
-    font-size: 18px;
-    font-family: "Poppins";
-    color: #2B6AA9;
-}
-#input_text::placeholder{
-    color: #2B6AA9;
-}
-
-.icons_input{
-    fill: #2B6AA9;
-    height: 30px;
-    width: 30px;
-}
-#filter_icon{
-    rotate: 90deg;
-}
-
-.medical_container{
-    width: 100%;
-    height: 160px;
-    margin-top: 20px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
-    overflow-x: hidden;
-    overflow-y: hidden;
-}
-
-.frame_container_medical{
-    width: 45%;
-    height: 81%;
-    border-radius: 10px;
-}
-
-#frame_left{
-    background-color: blue;
-}
-#frame_right{
-    background-color: #797979;
-}
-
-#pacientes_img{
-    height: 185px;
-    position: relative;
-    top: -33px;
-    right: 45px;
-}
-#personal_img{
-    height: 185px;
-    position: relative;
-    top: -33px;
-    right: 40px;
-}
-
-.name_tag{
-    width: 115px;
-    height: 32px;
-    background-color: #FEFEFF;
-    font-family: "Poppins";
-    font-size: 15px;
-    font-weight: 500;
-    position: relative;
-    top: -100px;
-    right: -70px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-top-left-radius: 10px;
-    border-bottom-left-radius: 10px;
-    margin: 0px;
-}
-
-.frame_tools{
-    display: flex;
-    flex-direction: column;
-    justify-content: start;
-    align-items: center;
-    height: auto;
-}
-
-.agregate_personal{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-family: "Poppins";
-    color: #2B6AA9;
-    margin-top: 30px;
-    width: 85%;
-    box-sizing: border-box;
-}
-
-#section_personal{
     height: 3px;
-    width: 280px;
-    background-color: #2B6AA9;
-    border-radius: 5px;
-    margin-top: 0px;
-    margin-bottom: 0px;
-    margin-left: 80px;
-    margin-right: 0px;
+    background-color: var(--Blue);
 }
 
-#agregate_personal_span{
-    font-size: 18px;
-    font-weight: 500;
-    font-size: 20px;
-    margin-top: 0px;
-    margin-bottom: 0px;
-    margin-left: 80px;
-    margin-right: 0px;
-}
-
-.medical_buttons{
-    width: 90%;
-    height: auto;
-    margin-top: 25px;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    box-sizing: border-box;
-}
-
-.medical_buttons_style{
-    width: 85px;
-    height: 85px;
-    border-radius: 10px;
-    background-color: white;
-    border-style: solid;
-    border-color: #2B6AA9;
-    border-width: 2px;
-}
-
-.icons_medical_buttons{
-    fill: #2B6AA9;
-    width: 36px;
-    height: 36px;
-}
-.icons_medical_buttons:hover{
-    fill: #FEFEFF;
-}
-
-.medical_buttons_style:hover{
-    background-color: #2B6AA9;
-    animation: ease-in-out;
-    transition: 0.4s;
-}
-
-.card_container_patient{
-    border-color: #2B6AA9;
-    background-color: #B0E2F1;
-    color: #2B6AA9;
-    border-style: solid;
-    border-width: 2px;
-    width: 90%;
-    height: 130px;
-    margin-top: 21px;
-    margin-bottom: 5px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-radius: 15px;
-    padding-left: 15px;
-}
-
-.img_card_container{
-    border-style: solid;
-    border-color: #2B6AA9;
-    border-width: 1px;
-    height: 70%;
-    width: 30%;
-    border-radius: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-#img_account_card{
-    width: 50px;
-    height: 50px;
-    fill: #2B6AA9;
-}
-
-.text_details_patient{
-    height: 70%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: start;
-    font-family: "Poppins";
-    color: #2B6AA9;
-}
-.name_patient{
-    font-size: 20px;
-    margin-top: 0px;
-    margin-bottom: 0px;
-    margin-left: 0px;
-    margin-right: 80px;
-}
-
-.name_patient1{
-    font-size: 20px;
-    margin-top: 0px;
-    margin-bottom: 0px;
-    margin-left: 0px;
-    margin-right: 110px;
-}
-
-.dots{
-    fill: #2B6AA9;
-    width: 40px;
-    height: 40px;
-}
-
-.final_card{
-    margin-bottom: 100px;
-}
-
-.NavigationBarSection{
+.div_login_container{
     position: fixed;
     width: 100%;
-    bottom: 0;
-}
-
-.NavigationBar{
-    display: flex;
-    background-color: var(--CleanBlue);
-    padding: 10px;
-    justify-content: space-evenly;
-    box-shadow: 0px 0px 30px var(--Shadow);
-}
-
-.NavBtn{
-    color: var(--Blue);
-    background-color: var(--CleanBlue);
-    border: none;
-    fill: var(--Blue);
-    transition: all 0.5s ease;
+    height: 70%;
+    background-image: url(/dist/img/resources/logo.png);
+    background-position: center;
+    background-size: 95%;
+    background-repeat: no-repeat;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
 }
 
-.NavBtn:hover{
-    color: var(--DarkBlue);
+.input_data{
+    width: 85%;
+    height: 90px;
+    background-color: var(--CleanBlue);
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    border-radius: 15px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
-.NavBtn:hover .NavBtnIcon{
-    fill: var(--DarkBlue);
-}
-
-.NavBtnIcon{
+.input_logos{
     fill: var(--Blue);
-    height: 30px;
-    width: 30px;
-    transition: all 0.5s ease;
+    width: 40px;
+    height: 40px;
+    margin-right: 20px;
+}
+
+.input_data_element{
+    height: 100%;
+    width: 100%;
+    background-color: #ffffff00;
+    border-style: none;
+    color: var(--Blue);
+    font-size: 20px;
+}
+.input_data_element:focus{
+    outline: none;
+    color: var(--Blue);
+}
+.input_data_element::placeholder{
+    color: var(--Blue);
+}
+
+.forggot_password_link{
+    font-size: 20px;
+    margin-top: 15px;
+}
+
+.button_login{
+    background-color: var(--CleanBlue);
+    color: var(--Blue);
+    width: 55%;
+    height: 60px;
+    border-style: none;
+    border-radius: 15px;
+    font-size: 20px;
+    position: relative;
+    top: 110px;
+    font-weight: 500;
+}
+.button_login:hover{
+    background-color: var(--DarkBlue);
+    color: white;
+    animation: ease-in-out;
+    transition: 0.5s;
 }
