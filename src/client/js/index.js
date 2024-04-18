@@ -1,3 +1,7 @@
+
+require("../css/style.css")
+require("../css/colors.css")
+
 // Esperar a que el DOM esté completamente cargado
 document.addEventListener("DOMContentLoaded", function() {
     function redireccionar() {
