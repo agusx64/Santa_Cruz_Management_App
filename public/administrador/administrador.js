@@ -40,12 +40,12 @@ document.addEventListener("DOMContentLoaded", function() {
 
 });
 
-function go_to_AddEmail(){ window.location.href = "/src/client/file_group_3/agregar_correo/agregar_correo.html"; };
-function go_to_AddPersonal() { window.location.href = "/src/client/file_group_4/agregar_personal/agregar_personal.html" };
-function go_to_AddPatient() { window.location.href = "/src/client/file_group_4/agregar_paciente/agregar_paciente.html" };
-function go_to_AddChildren() { window.location.href = "/src/client/file_group_4/agregar_infante/agregar_infante.html" };
-function go_to_personalList() { window.location.href = "/src/client/file_group_4/listado_personal/listado_personal.html" };
-function go_to_patientList() { window.location.href = "/src/client/file_group_4/listado_pacientes/listado_pacientes.html" };
-function go_to_Pharmacy() { window.location.href = "/src/client/file_group_2/farmacia/farmacia.html" };
-function go_to_Settings() { window.location.href = "/src/client/file_group_2/configuracion/configuracion.html" };
-function go_to_Calendar() { window.location.href = "/src/client/file_group_2/calendario/calendario.html" };
+function go_to_AddEmail(){ window.location.href = "/agregar_correo/agregar_correo.html"; };
+function go_to_AddPersonal() { window.location.href = "/agregar_personal/agregar_personal.html" };
+function go_to_AddPatient() { window.location.href = "/agregar_paciente/agregar_paciente.html" };
+function go_to_AddChildren() { window.location.href = "/agregar_infante/agregar_infante.html" };
+function go_to_personalList() { window.location.href = "/listado_personal/listado_personal.html" };
+function go_to_patientList() { window.location.href = "/listado_pacientes/listado_pacientes.html" };
+function go_to_Pharmacy() { window.location.href = "/farmacia/farmacia.html" };
+function go_to_Settings() { window.location.href = "/configuracion/configuracion.html" };
+function go_to_Calendar() { window.location.href = "/calendario/calendario.html" };
