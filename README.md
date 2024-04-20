@@ -12,5 +12,5 @@
 
 - Para ejecutar el servidor de Node JS debe de ejecutar el siguiente comando
 
-- node src/server.js
 - npm run command
+- node app.js
