@@ -1,0 +1,172 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins";
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    padding-top: 0;
+}
+
+.header_page{
+    background-color: var(--CleanBlue);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 90px;
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.header_icons_container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 50%;
+}
+
+#patient_label_text{
+    color: var(--DarkBlue);
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.header_icons{
+    width: 32px;
+    height: 32px;
+    fill: var(--DarkBlue);
+}
+
+.account_details_container{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.img_profile_container{
+    width: 20%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 5px;
+}
+
+.name_and_mail_cont{
+    width: 80%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+}
+
+.name_user{
+    font-size: 22px;
+    color: var(--Blue);
+}
+
+.mail{
+    color: var(--Blue);
+}
+
+#img_account_card{
+    width: 70%;
+    height: 70%;
+    fill: var(--Blue);
+}
+
+.div_bar{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.draw_bar{
+    width: 70%;
+    height: 3px;
+    background-color: var(--Blue);
+}
+
+.options_menu{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    margin-top: 35px;
+}
+
+.settings_container{
+    margin-left: 35px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.settings_icons{
+    width: 30px;
+    height: 30px;
+    margin-right: 20px;
+    fill: var(--Blue);
+}
+
+a{
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.NavigationBarSection{
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+.NavigationBar{
+    display: flex;
+    background-color: var(--CleanBlue);
+    padding: 10px;
+    justify-content: space-evenly;
+    box-shadow: 0px 0px 30px var(--Shadow);
+}
+
+.NavBtn{
+    color: var(--Blue);
+    background-color: var(--CleanBlue);
+    border: none;
+    fill: var(--Blue);
+    transition: all 0.5s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.NavBtn:hover{
+    color: var(--DarkBlue);
+}
+
+.NavBtn:hover .NavBtnIcon{
+    fill: var(--DarkBlue);
+}
+
+.NavBtnIcon{
+    fill: var(--Blue);
+    height: 30px;
+    width: 30px;
+    transition: all 0.5s ease;
+}
