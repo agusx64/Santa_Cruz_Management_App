@@ -77,6 +77,9 @@ body{
 #input_text::placeholder{
     color: #2B6AA9;
 }
+#input_text:focus{
+    outline: none;
+}
 
 .icons_input{
     fill: #2B6AA9;
@@ -118,7 +121,7 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding-top: 20px;
+    padding-top: 40px;
 }
 
 .button_medicine_list{
