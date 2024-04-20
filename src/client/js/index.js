@@ -1,4 +1,5 @@
-require("../css/style.css");
+
+require("../css/style.css")
 require("../css/colors.css")
 
 // Esperar a que el DOM esté completamente cargado

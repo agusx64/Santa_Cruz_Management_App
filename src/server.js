@@ -6,7 +6,7 @@ const webpackConfig = require('../webpack.config');
 
 var app = express();
 app.set('port',(process.env.PORT || 3000));
-app.use('/static', express.static('dist'));
+app.use('/static', express.static('public'));
 app.use(webpackDevMiddleware(webpack(webpackConfig)));
 
 app.get('/', function(req, res, next){
