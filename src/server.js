@@ -15,4 +15,5 @@ app.get('/', function(req, res, next){
 
 app.listen(app.get('port'),() => {
     console.log('Servidor activo y corriendo');
+    console.log("Servidor de plantillas iniciado");
 })
