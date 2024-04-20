@@ -1,0 +1,217 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins";
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    padding-top: 0;
+}
+
+.header_page{
+    background-color: var(--CleanBlue);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 90px;
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.header_icons_container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 40%;
+}
+
+#patient_label_text{
+    color: var(--DarkBlue);
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.header_icons{
+    width: 32px;
+    height: 32px;
+    fill: var(--DarkBlue);
+}
+
+.date_container{
+    padding-left: 20px;
+    padding-top: 20px;
+    color: var(--Blue);
+}
+
+.date_header{
+    font-size: 28px;
+}
+.label_date{
+    font-size: 16px;
+}
+
+.day_date_container{
+    margin-top: 23px;
+    width: 100%;
+    overflow-x: auto; 
+    overflow-y: hidden; 
+}
+
+.elements{
+    white-space: nowrap;
+}
+
+.frame_day_button{
+    width: 90px; 
+    height: 90px; 
+    display: inline-flex;
+    flex-direction: column;
+    margin-right: 5px;
+    margin-left: 5px;
+    border-color: var(--Blue);
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+    animation: ease-in-out;
+    transition: 0.5s;
+}
+
+.number_day{
+    color: var(--Blue);
+    font-size: 30px;
+    margin: 0;
+    font-weight: 600;
+}
+
+.week_day{
+    margin: 0px;
+    color: var(--Blue);
+}
+
+.div_bar{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 25px;
+}
+
+.bar{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    width: 90%;
+    color: var(--Blue);
+}
+
+.hour_section{
+    font-size: 20px;
+    font-weight: 600;
+    margin-right: 20px;
+}
+
+.bar_section{
+    background-color: var(--Blue);
+    height: 3px;
+    width: 65%;
+}
+
+.card_container_patient{
+    border-color: #2B6AA9;
+    border-style: solid;
+    border-width: 2px;
+    width: 90%;
+    height: 130px;
+    margin-top: 21px;
+    margin-bottom: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 15px;
+}
+
+#img_account_card{
+    width: 64px;
+    height: 64px;
+    fill: #2B6AA9;
+    position: relative;
+    left: 25px;
+}
+
+.text_details_patient{
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: start;
+    font-family: "Poppins";
+    color: #2B6AA9;
+}
+.name_patient{
+    font-size: 20px;
+}
+
+.dots{
+    fill: #2B6AA9;
+    width: 40px;
+    height: 40px;
+}
+
+.medical_cards_container{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    margin-bottom: 90px;
+}
+
+.NavigationBarSection{
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+.NavigationBar{
+    display: flex;
+    background-color: var(--CleanBlue);
+    padding: 10px;
+    justify-content: space-evenly;
+    box-shadow: 0px 0px 30px var(--Shadow);
+}
+
+.NavBtn{
+    color: var(--Blue);
+    background-color: var(--CleanBlue);
+    border: none;
+    fill: var(--Blue);
+    transition: all 0.5s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.NavBtn:hover{
+    color: var(--DarkBlue);
+}
+
+.NavBtn:hover .NavBtnIcon{
+    fill: var(--DarkBlue);
+}
+
+.NavBtnIcon{
+    fill: var(--Blue);
+    height: 30px;
+    width: 30px;
+    transition: all 0.5s ease;
+}

@@ -1,0 +1,213 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins";
+}
+
+.SectionInfo{
+    width: 100%;
+    background-color: var(--CleanBlue);
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    box-sizing: border-box;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    display: flex;
+}
+
+.BackButton{
+    fill: var(--Blue);
+    background-color: var(--CleanBlue);
+    border: none;
+    transition: all 0.5s ease;
+}
+
+.BackButton:hover{
+    fill: var(--DarkBlue);
+}
+
+.SectionInfoDetails{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    color: var(--Blue);
+    fill: var(--Blue);
+}
+
+.SectionInfoText{
+    margin-left: 5px;
+    font-size: 20px;
+    font-weight: bolder;
+    margin-right: 5px;
+}
+
+.SectionInfoIcon{
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.Content{
+    box-sizing: border-box;
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    color: var(--Blue);
+    margin-bottom: 80px;
+}
+
+.ContentInfo{
+    display: flex;
+    box-sizing: border-box;
+    padding-left: 10px;
+    padding-right: 10px;
+    flex-direction: column;
+    align-items: center;
+}
+
+.ContentDetails{
+    display: flex;
+    flex-direction: row;
+    display: flex;
+    align-items: center;
+    color: var(--Blue);
+    fill: var(--Blue);
+}
+
+.ContentIcon{
+    height: 60px;
+    width: 60px;
+    margin-right: 15px;
+}
+
+.ContentText{
+    display: flex;
+    flex-direction: column;
+}
+
+.ContentTitle{
+    margin: 0;
+    font-size: 20px;
+    font-weight: bolder;
+}
+
+.IDText{
+    display: flex;
+}
+
+.ContentTextSmall{
+    margin: 0;
+    margin-right: 2px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: row;
+}
+
+.Separator{
+    background-color: var(--Blue);
+    height: 2px;
+    width: 100%;
+}
+
+.NavigationBarSection{
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+.NavigationBar{
+    display: flex;
+    background-color: var(--CleanBlue);
+    padding: 10px;
+    justify-content: space-evenly;
+    box-shadow: 0px 0px 30px var(--Shadow);
+}
+
+.NavBtn{
+    color: var(--Blue);
+    background-color: var(--CleanBlue);
+    border: none;
+    fill: var(--Blue);
+    transition: all 0.2s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.NavBtn:hover{
+    color: var(--DarkBlue);
+}
+
+.NavBtn:hover .NavBtnIcon{
+    fill: var(--DarkBlue);
+}
+
+.NavBtnIcon{
+    fill: var(--Blue);
+    height: 30px;
+    width: 30px;
+    transition: all 0.2s ease;
+}
+
+.InfantListSection{
+    border-radius: 10px;
+    margin-top: 20px;
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+.Section{
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.Header{
+    display: flex;
+    flex-direction: row;
+    fill: var(--Blue);
+    justify-content: center;
+    align-items: center;
+}
+
+.SectionTitle{
+    margin-left: 5px;
+    font-size: 20px;
+    font-weight: bolder;
+    margin: 0;
+    margin-right: 5px;
+}
+
+.List{
+    background-color: var(--CleanBlue);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    margin-top: 10px;
+    fill: var(--Blue);
+    margin-bottom: 20px;
+}
+
+.ListIcon{
+    width: 50px;
+    height: 50px;
+    margin: 10px;
+}
+
+.InfoSection{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    margin-top: 10px;
+}
+
+.InfoTextBold{
+    font-weight: bolder;
+    margin: 0;
+    width: 50%;
+}

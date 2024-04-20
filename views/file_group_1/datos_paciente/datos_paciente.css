@@ -1,0 +1,178 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins";
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    padding-top: 0;
+}
+
+.header_page{
+    background-color: var(--CleanBlue);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 90px;
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.header_icons_container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 35%;
+}
+
+#patient_label_text{
+    color: var(--DarkBlue);
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.header_icons{
+    width: 32px;
+    height: 32px;
+    fill: var(--DarkBlue);
+}
+
+.header_section_details{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    margin-top: 25px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+#icon_header_details{
+    fill: var(--Blue);
+    width: 70px;
+    height: 70px;
+}
+
+.text_section_container{
+    margin-left: 15px;
+    color: var(--Blue);
+}
+
+.section_cont{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 25px;
+}
+
+#div_bar{
+    width: 80%;
+    height: 2px;
+    background-color: var(--Blue);
+}
+
+.section_information_card{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    padding-top: 25px;
+    margin-bottom: 85px;
+}
+
+.card{
+    background-color: var(--CleanBlue);
+    width: 90%;
+    padding-top: 20px;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.header_card{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    color: var(--Blue);
+    margin-bottom: 10px;
+}
+
+.text_header_card{
+    font-weight: 600;
+    font-size: 21px;
+}
+
+.icon_header_card{
+    fill: var(--Blue);
+    width: 35px;
+    height: 35px;
+    margin-right: 15px;
+}
+
+.personal_information{
+    display: flex;
+    justify-content: space-between;
+    color: var(--Blue);
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+.text_personal_details{
+    font-size: 17px;
+}
+
+.inside{
+    margin-bottom: 20px;
+}
+
+.NavigationBarSection{
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+.NavigationBar{
+    display: flex;
+    background-color: var(--CleanBlue);
+    padding: 10px;
+    justify-content: space-evenly;
+    box-shadow: 0px 0px 30px var(--Shadow);
+}
+
+.NavBtn{
+    color: var(--Blue);
+    background-color: var(--CleanBlue);
+    border: none;
+    fill: var(--Blue);
+    transition: all 0.2s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.NavBtn:hover{
+    color: var(--DarkBlue);
+}
+
+.NavBtn:hover .NavBtnIcon{
+    fill: var(--DarkBlue);
+}
+
+.NavBtnIcon{
+    fill: var(--Blue);
+    height: 30px;
+    width: 30px;
+    transition: all 0.2s ease;
+}
