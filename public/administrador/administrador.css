@@ -75,6 +75,9 @@ body{
 #input_text::placeholder{
     color: #2B6AA9;
 }
+#input_text:focus{
+    outline: none;
+}
 
 .icons_input{
     fill: #2B6AA9;
