@@ -2,7 +2,7 @@
   "name": "santa-cruz-management-app",
   "version": "1.0.0",
   "description": "Repositorio para aplicacion web movil \"Santa Cruz Management App\"",
-  "main": "server.js",
+  "main": "app.js",
   "scripts": {
     "command": "nodemon --exec node src/server.js"
   },

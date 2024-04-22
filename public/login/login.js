@@ -4,14 +4,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     button_login.addEventListener("click", function() {
 
-        var input_email = document.getElementById('input_mail').value;
-        var input_password = document.getElementById('input_password').value;
+        //Referencia al archivo de destino
 
-        if (input_email === "Agus" && input_password === "1234") {
-            window.location.href = "/administrador/administrador.html";
-        }
-        else if (input_email === "Jess" && input_password === "1234"){
-            window.location.href = "/homepage/homepage.html";
-        }
     });
 });
