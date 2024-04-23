@@ -256,6 +256,53 @@ app.post("/register_personal", function(req, res) {
         }
 });
 
+//POST  de solcitud de login
+app.post("/validate_login", function(req, res) {
+
+    const html_body_login = req.body;
+    console.log(html_body_login);
+
+    let loginMail = html_body_login.input_mail;
+    let loginPassword = html_body_login.input_password;
+
+    let compareDataonDB = "SELECT nombre, correo_electronico, user_password FROM usuario WHERE correo_electronico = '"+loginMail+"' AND user_password = '"+loginPassword+"'";
+
+    conection.query(compareDataonDB, function(error, results) {
+
+        if(error) {
+
+            throw error;
+
+        } else {
+
+            if(loginMail, loginPassword != ""){
+
+                if(results.length > 0) {
+
+                    let nameUserInsert = results[0].nombre
+                    //Redireccion de la pagina de inicio o de administrador
+                    console.log("Sesion iniciada, bienvenido '"+nameUserInsert+"'");
+    
+                } else {
+
+                    //Ventana emergente de credenciales ivalidas
+                    console.log("Credenciales invalidas");
+
+                }
+
+            } else {
+
+                //Ventana emergente de campos vacios
+                console.log("No has llenado todos los campos");
+
+            }
+
+        }
+
+    });
+
+});
+
 //Configuracion de puerto
 app.listen(3000, function () {
     console.log("servidor activo");
