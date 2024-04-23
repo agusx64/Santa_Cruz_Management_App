@@ -136,3 +136,19 @@ body{
     animation: ease-in-out;
     transition: 0.5s;
 }
+
+.BGMSG{
+    background-color: rgba(0, 0, 0, 0.534);
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+
+.MSGBOX{
+    padding: 10px;
+    background-color: var(--CleanBlue);
+}

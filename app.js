@@ -26,13 +26,19 @@ const app = express();
 
 //Ruta de archivos estaticos y middleware-------------------------------------------------------------------------------------
 
-app.use(express.static("public"));
 app.set("view engine", "ejs");
+app.use(express.static('public'));
+app.get("/", function(err, res){
+    res.render("index");
+});
 app.set(express.json());
 app.use(express.urlencoded({extended:false}));
 
 //Declaracion de directorios
 
+app.post("/Start", function(req, res){
+    res.redirect("/login/login.html");
+})
 
 // POST del Directorio de formulario de registro de usuarios "agregar_correo.html"
 app.post("/register", function(req, res) {
@@ -280,8 +286,9 @@ app.post("/validate_login", function(req, res) {
                 if(results.length > 0) {
 
                     let nameUserInsert = results[0].nombre
-                    //Redireccion de la pagina de inicio o de administrador
+                    res.redirect("/homepage/homepage.html");
                     console.log("Sesion iniciada, bienvenido '"+nameUserInsert+"'");
+                    
     
                 } else {
 
