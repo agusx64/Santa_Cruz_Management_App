@@ -32,6 +32,9 @@ app.set(express.json());
 app.use(express.urlencoded({extended:false}));
 
 //Declaracion de directorios
+
+
+// POST del Directorio de formulario de registro de usuarios "agregar_correo.html"
 app.post("/register", function(req, res) {
 
     const html_body = req.body;
@@ -44,119 +47,216 @@ app.post("/register", function(req, res) {
     let correoElectronico = html_body.correo_electronico;
     let contrasenaUsuario = html_body.contrasena_usuario;
 
-    //Variable para almacenar las consultas e insertarlas en la base de datos
-    let dataInsert = "INSERT INTO usuario (nombre, area_asignada, especialidad, correo_electronico, user_password) VALUES ('"+nombreUsuario+"', '"+areaAsignada+"', '"+usuario_especialidad+"', '"+correoElectronico+"', '"+contrasenaUsuario+"')";
+    let validateUsername = "SELECT * FROM usuario WHERE nombre = '"+nombreUsuario+"'";
 
-    conection.query(dataInsert, function(error) {
+    //Validacion de existencia de usuario en la base de datos
+    conection.query(validateUsername, function(error, results) {
 
-        if (error) {
+        if(error) {
 
             throw error;
 
         } else {
 
-            console.log("Datos almacenados en santacruzdb");
-            res.sendStatus(200);
+            if(results.length > 0) {
+
+                console.log("Ya existe un usario con ese nombre")
+                // Agregar ventana emergente
+
+            } else  { 
+
+                //Variable para almacenar las consultas e insertarlas en la base de datos
+                let dataInsert_usuario = "INSERT INTO usuario (nombre, area_asignada, especialidad, correo_electronico, user_password) VALUES ('"+nombreUsuario+"', '"+areaAsignada+"', '"+usuario_especialidad+"', '"+correoElectronico+"', '"+contrasenaUsuario+"')";
+                if( nombreUsuario,
+                    areaAsignada,
+                    usuario_especialidad,
+                    correoElectronico,
+                    contrasenaUsuario != "") {
+            
+                    conection.query(dataInsert_usuario, function(error) {
+            
+                        if (error) {
+                
+                            throw error;
+                
+                        } else {
+                
+                            console.log("Datos almacenados en santacruzdb");
+                            //Ventana emegente de usuario creado
+                
+                        }
+                
+                    });
+            
+                } else {
+
+                    console.log("Los campos no deben vacios")
+                    //Ventana emergante de datos vacion
+            
+                }
+
+            }
 
         }
 
-    })
+    });
 
 });
 
+
+// POST de directorio de formulario de registro de infantes
+app.post("/child_register", function(req, res) {
+
+    const html_body_child = req.body;
+    console.log(html_body_child);
+
+    //Obtencion de variables del formulario de infantes
+    let nombreInfante = html_body_child.nombre_infante;
+    let generoInfante = html_body_child.genero_infante;
+    let edadInfante = html_body_child.edad_infante;
+    let noSeguro = html_body_child.no_seguro;
+    let tipoSangre = html_body_child.tipo_sangre;
+    let alergiasInfante = html_body_child.alergias_infante;
+    let antecedentesInfante  = html_body_child.antecedentes_infante;
+    let nombreTutor = html_body_child.nombre_tutor;
+    let edadTutor = html_body_child.edad_tutor;
+    let noTelTutor  = html_body_child.no_telefonico_tutor;
+    let antecedentesTutor = html_body_child.antecedentes_tutor;
+
+    //Consulta para insercion de datos en la tabla de infantes
+    let dataInsert_infante = "INSERT INTO infantes (nombre_inf, genero_inf, edad_inf, no_seguro, tipo_sangre, alergias, antecedentes, nombre_tutor, edad_tutor, no_telefonico_tutor, parentezco) VALUES ('"+nombreInfante+"', '"+generoInfante+"', '"+edadInfante+"', '"+noSeguro+"', '"+tipoSangre+"', '"+alergiasInfante+"', '"+antecedentesInfante+"', '"+nombreTutor+"', '"+edadTutor+"', '"+noTelTutor+"', '"+antecedentesTutor+"')";
+
+    if(nombreInfante, 
+        generoInfante,  
+        edadInfante, 
+        noSeguro, 
+        tipoSangre, 
+        alergiasInfante, 
+        antecedentesInfante, 
+        nombreTutor,
+        edadTutor,
+        noTelTutor,
+        antecedentesTutor != "") {
+
+            conection.query(dataInsert_infante, function(error) {
+
+                if (error) {
+        
+                    throw error;
+        
+                } else {
+        
+                    console.log("Datos de infante almacenados en santacruzdb");
+                    //Ventana emergante de llenado correcto
+        
+                }
+        
+            });
+
+        } else {
+
+            console.log("Se deben de llenar todos los campos del formulario");
+            //Advertencia de datos incompletos
+
+        };
+
+});
+
+//POST de directorio de formulario de agregar infante "agregar_paciente.html"
+app.post("/patient_register", function(req, res) {
+
+    const html_body_patient = req.body;
+    console.log(html_body_patient);
+
+    let nombrePaciente = html_body_patient.nombre_paciente;
+    let generoPaciente = html_body_patient.genero_paciente;
+    let edadPaciente = html_body_patient.edad_paciente;
+    let institucionProcedencia = html_body_patient.institucion_procedencia;
+    let telefonoPaciente = html_body_patient.telefono_paciente;
+    let noSeguro = html_body_patient.no_seguro;
+    let tipoSangre = html_body_patient.tipo_sangre;
+    let alergiasPaciente = html_body_patient.alergias_paciente;
+    let antecedentesPaciente = html_body_patient.antecedentes_paciente;
+
+    //Consulta de insercion de paceintes
+    let dataInsert_paciente = "INSERT INTO pacientes (nombre_paciente, genero_paciente, edad_paciente, institucion_procedencia, telefono_paciente, no_seguro, tipo_sangre, alergias_paciente, antecedentes_paciente) VALUES ('"+nombrePaciente+"', '"+generoPaciente+"', '"+edadPaciente+"', '"+institucionProcedencia+"', '"+telefonoPaciente+"', '"+noSeguro+"', '"+tipoSangre+"', '"+alergiasPaciente+"', '"+antecedentesPaciente+"')";
+
+    if(nombrePaciente,
+        generoPaciente,
+        edadPaciente,
+        institucionProcedencia,
+        telefonoPaciente,
+        noSeguro,
+        tipoSangre,
+        alergiasPaciente,
+        antecedentesPaciente != "") {
+
+            conection.query(dataInsert_paciente, function(error) {
+
+                if(error) {
+
+                    throw error;
+
+                } else {
+
+                    console.log("Datos almacenados correctamente en santacruzdb");
+                    //Ventana emegernte de datos almacenados de forma correcta
+
+                }
+
+            });
+
+        } else {
+
+            console.log("No se han llenado todos los campos");
+
+        }
+
+});
+
+//POST de formulario para agregar personal "agregar_personal.html"
+app.post("/register_personal", function(req, res) {
+
+    const html_body_personal = req.body;
+    console.log(html_body_personal);
+
+    let nombrePersonal = html_body_personal.nombre_personal;
+    let generoPersonal = html_body_personal.genero_personal;
+    let especialidadPersonal = html_body_personal.especialidad_personal;
+    let procedenciaPersonal = html_body_personal.procedencia_personal;
+    let experienciaPersonal = html_body_personal.experiencia_personal;
+
+    //Consulta de insercion
+    let dataInsert_personal = "INSERT INTO personal (nombre_personal, genero_personal, especialidad_personal, procedencia_personal, experiencia_personal) VALUES ('"+nombrePersonal+"', '"+generoPersonal+"', '"+especialidadPersonal+"', '"+procedenciaPersonal+"', '"+experienciaPersonal+"')";
+
+    if(nombrePersonal,
+       generoPersonal,
+       especialidadPersonal,
+       procedenciaPersonal,
+       experienciaPersonal != "") {
+
+            conection.query(dataInsert_personal, function(error) {
+
+                if(error) {
+
+                    throw error;
+
+                } else {
+
+                    console.log("Los datos se insertaron correctamente");
+
+                }
+
+            });
+
+        } else {
+
+            console.log("No se han llenado todos los campos");
+
+        }
+});
 
 //Configuracion de puerto
 app.listen(3000, function () {
     console.log("servidor activo");
 });
-
-//Ejecucion de metodos de CRUD
-// insert();
-// select();
-// update();
-// fun_delete();
-//conection.end();
-
-//Metodo de seleccion de datos
-function select() {
-
-    const emails = "SELECT * FROM correos"
-    conection.query(emails, function(error, list) {
-
-        if(error) {
-
-            throw error;
-
-        } else {
-
-            //Para contar se agrega .length
-            //Para seleccionar fila especifica []
-            //Para mostrar un unico campo de fila [].nombre_campo
-            //Mostrar el ultimo registro de la tabla [list.length - 1]
-            console.log(list[list.length - 1]);
-
-        };
-
-    });
-
-};
-
-//Metodo de insercion de datos
-function insert() {
-
-    const insert_mails = "INSERT INTO correos (email_doc, pass) VALUES ('agusm1253@gmail.com', '12345678')";
-    conection.query(insert_mails, function(error, rows) {
-
-        if(error) {
-
-            throw error;
-
-        } else {
-
-            console.log("Datos insertados correctamente");
-
-        }
-
-    })
-
-}
-
-//Metodo de modificacion de datos
-function update() {
-
-    const modify__mails = "UPDATE correos SET email_doc = 'lol@cruz.com' WHERE id_correo = 5 ";
-    conection.query(modify__mails, function(error, rows) {
-
-        if(error) {
-
-            throw error;
-
-        } else {
-
-            console.log("Datos actualizados correctamente");
-
-        }
-
-    })
-
-};
-
-//Metodo para eliminar los datos
-function fun_delete() {
-
-    const delete_query = "DELETE FROM correos WHERE id_correo = 5"
-    conection.query(delete_query, function(error, rows) {
-
-        if(error) {
-
-            throw error;
-
-        } else {
-
-            console.log("Datos eliminados correctamente");
-
-        }
-
-    })
-
-}

@@ -47,20 +47,23 @@
         </div>
     </div>
 
-<!--aqui comienza la seccion de informacion-->    
+<!--aqui comienza la seccion de informacion-->  
 
+<form action="/child_register" method="post" id="form_registro_infante">
+
+    
     <div class="AddDetails">
         <div class="AddDetailsElement">
-            <p class="AddDetailsText">Nombre</p>
-            <Input class="AddDetailsInput" placeholder="Escriba un nombre"></Input>
+            <label for="nombre_infante" class="AddDetailsText">Nombre</p>
+            <Input name="nombre_infante" id="nombre_infante" class="AddDetailsInput" placeholder="Escriba un nombre"></Input>
         </div>
         <div class="AddDetailsElement">
-            <p class="AddDetailsText">Genero</p>
-            <Input class="AddDetailsInput" placeholder="Escriba su genero"></Input>
+            <label for="genero_infante" class="AddDetailsText">Genero</p>
+            <Input name="genero_infante" id="genero_infante" class="AddDetailsInput" placeholder="Escriba su genero"></Input>
         </div>
         <div class="AddDetailsElement">
-            <p class="AddDetailsText">Edad</p>
-            <Input class="AddDetailsInput" placeholder="Escriba la edad"></Input>
+            <label for="edad_infante" class="AddDetailsText">Edad</p>
+            <Input name="edad_infante" id="edad_infante" class="AddDetailsInput" placeholder="Escriba la edad"></Input>
         </div>
         <div class="Separatortwo"></div>
     </div>
@@ -83,20 +86,20 @@
 
     <div class="AddDetails2">
         <div class="AddDetailsElement">
-            <p class="AddDetailsText">No. de seguro</p>
-            <Input class="AddDetailsInput" placeholder="Seguro"></Input>
+            <label for="no_seguro" class="AddDetailsText">No. de seguro</p>
+            <Input name="no_seguro" id="no_seguro" class="AddDetailsInput" placeholder="Seguro"></Input>
         </div>
         <div class="AddDetailsElement">
-            <p class="AddDetailsText">Tipo de sangre</p>
-            <Input class="AddDetailsInput" placeholder="Sangre"></Input>
+            <label for="tipo_sangre" class="AddDetailsText">Tipo de sangre</p>
+            <Input name="tipo_sangre" id="tipo_sangre" class="AddDetailsInput" placeholder="Sangre"></Input>
         </div>
         <div class="AddDetailsElement">
-            <p class="AddDetailsText">Alergias</p>
-            <Input class="AddDetailsInput" placeholder="Alergia"></Input>
+            <label for="alergias_infante" class="AddDetailsText">Alergias</p>
+            <Input name="alergias_infante" id="alergias_infante" class="AddDetailsInput" placeholder="Alergia"></Input>
         </div>
         <div class="AddDetailsElement">
-            <p class="AddDetailsText">Antecedentes</p>
-            <Input class="AddDetailsInput" placeholder="Antecedentes"></Input>
+            <label for="antecedentes_infante" class="AddDetailsText">Antecedentes</p>
+            <Input name="antecedentes_infante" id="antecedentes_infante" class="AddDetailsInput" placeholder="Antecedentes"></Input>
         </div>
         <div class="Separatortwo"></div>
     </div>
@@ -118,20 +121,20 @@
 
     <div class="AddDetails2">
         <div class="AddDetailsElement">
-            <p class="AddDetailsText">Nombre</p>
-            <Input class="AddDetailsInput" placeholder="Seguro"></Input>
+            <label for="nombre_tutor" class="AddDetailsText">Nombre</p>
+            <Input name="nombre_tutor" id="nombre_tutor" class="AddDetailsInput" placeholder="Seguro"></Input>
         </div>
         <div class="AddDetailsElement">
-            <p class="AddDetailsText">Edad</p>
-            <Input class="AddDetailsInput" placeholder="Sangre"></Input>
+            <label for="edad_tutor" class="AddDetailsText">Edad</p>
+            <Input name="edad_tutor" id="edad_tutor" class="AddDetailsInput" placeholder="Edad"></Input>
         </div>
         <div class="AddDetailsElement">
-            <p class="AddDetailsText">No. telefonico</p>
-            <Input class="AddDetailsInput" placeholder="Alergia"></Input>
+            <label for="no_telefonico_tutor" class="AddDetailsText">No. telefonico</p>
+            <Input name="no_telefonico_tutor" id="no_telefonico_tutor" class="AddDetailsInput" placeholder="Alergia"></Input>
         </div>
         <div class="AddDetailsElement">
-            <p class="AddDetailsText">Parentezco</p>
-            <Input class="AddDetailsInput" placeholder="Antecedentes"></Input>
+            <label for="antecedentes_tutor" class="AddDetailsText">Parentezco</p>
+            <Input name="antecedentes_tutor" id="antecedentes_tutor" class="AddDetailsInput" placeholder="Antecedentes"></Input>
         </div>
         <div class="Separatortwo"></div>
     </div>
@@ -139,11 +142,11 @@
 <!--aqui comienza el boton de agregar-->
 
     <div class="AddMailBtnSection">
-        <button class="AddMailBtn">
-            Agregar
-            <svg class="AddMailBtnIcon" xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M440-440v120q0 17 11.5 28.5T480-280q17 0 28.5-11.5T520-320v-120h120q17 0 28.5-11.5T680-480q0-17-11.5-28.5T640-520H520v-120q0-17-11.5-28.5T480-680q-17 0-28.5 11.5T440-640v120H320q-17 0-28.5 11.5T280-480q0 17 11.5 28.5T320-440h120Zm40 360q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Z"/></svg>
-        </button>
+        <input type="submit" id="agregar_infante_input" value="agregar" class="AddMailBtn" value="Agregar">
+        <svg class="AddMailBtnIcon" xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M440-440v120q0 17 11.5 28.5T480-280q17 0 28.5-11.5T520-320v-120h120q17 0 28.5-11.5T680-480q0-17-11.5-28.5T640-520H520v-120q0-17-11.5-28.5T480-680q-17 0-28.5 11.5T440-640v120H320q-17 0-28.5 11.5T280-480q0 17 11.5 28.5T320-440h120Zm40 360q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Z"/></svg>
     </div>
+
+</form>
 
 <!--aqui comienza la navbar-->
 

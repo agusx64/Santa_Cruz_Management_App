@@ -45,34 +45,37 @@
         </div>
     </div>
 
-    <div class="AddDetails">
-        <div class="AddDetailsElement">
-            <p class="AddDetailsText">Nombre</p>
-            <Input class="AddDetailsInput" placeholder=" Escriba un nombre"></Input>
-        </div>
-        <div class="AddDetailsElement">
-            <p class="AddDetailsText">Genero</p>
-            <Input class="AddDetailsInput" placeholder="Escriba su genero"></Input>
-        </div>
-        <div class="AddDetailsElement">
-            <p class="AddDetailsText">Especialidad</p>
-            <Input class="AddDetailsInput" placeholder="Escriba la especialidad"></Input>
-        </div>
-        <div class="AddDetailsElement">
-            <p class="AddDetailsText">Institucion de procedencia</p>
-            <Input class="AddDetailsInput" placeholder=" Escriba la institucion"></Input>
-        </div>
-        <div class="AddDetailsElement">
-            <p class="AddDetailsText">Experiencia</p>
-            <Input class="AddDetailsInput" placeholder="Escriba la experiencia"></Input>
-        </div>
-        <div class="AddMailBtnSection">
-            <button class="AddMailBtn">
-                Agregar
+    <form action="/register_personal" method="post" id="form_personal_register">
+
+        <div class="AddDetails">
+            <div class="AddDetailsElement">
+                <label for="nombre_personal" class="AddDetailsText">Nombre</label>
+                <Input name="nombre_personal" id="nombre_personal" class="AddDetailsInput" placeholder=" Escriba un nombre"></Input>
+            </div>
+            <div class="AddDetailsElement">
+                <label for="genero_personal" class="AddDetailsText">Genero</label>
+                <Input name="genero_personal" id="genero_personal" class="AddDetailsInput" placeholder="Escriba su genero"></Input>
+            </div>
+            <div class="AddDetailsElement">
+                <label for="especialidad_personal" class="AddDetailsText">Especialidad</label>
+                <Input name="especialidad_personal" id="especialidad_personal" class="AddDetailsInput" placeholder="Escriba la especialidad"></Input>
+            </div>
+            <div class="AddDetailsElement">
+                <label for="procedencia_personal" class="AddDetailsText">Institucion de procedencia</label>
+                <Input name="procedencia_personal" id="procedencia_personal" class="AddDetailsInput" placeholder=" Escriba la institucion"></Input>
+            </div>
+            <div class="AddDetailsElement">
+                <label for="experiencia_personal" class="AddDetailsText">Experiencia</label>
+                <Input name="experiencia_personal" id="experiencia_personal" class="AddDetailsInput" placeholder="Escriba la experiencia"></Input>
+            </div>
+            <div class="AddMailBtnSection">
+                <input type="submit" value="Registrar" class="AddMailBtn">
                 <svg class="AddMailBtnIcon" xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M440-440v120q0 17 11.5 28.5T480-280q17 0 28.5-11.5T520-320v-120h120q17 0 28.5-11.5T680-480q0-17-11.5-28.5T640-520H520v-120q0-17-11.5-28.5T480-680q-17 0-28.5 11.5T440-640v120H320q-17 0-28.5 11.5T280-480q0 17 11.5 28.5T320-440h120Zm40 360q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Z"/></svg>
-            </button>
-        </div>
-        <div class="Separator"></div>
+            </div>
+
+    </form>
+
+    <div class="Separator"></div>
     </div>
     <div class="NavigationBarSection">
         <div class="NavigationBar">
