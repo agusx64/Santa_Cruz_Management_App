@@ -278,7 +278,6 @@ app.post("/validate_login", function(req, res) {
 
     let loginMail = html_body_login.input_mail;
     let loginPassword = html_body_login.input_password;
-    let mensaje = html_body_login.TXTMSG;
 
     let compareDataonDB = "SELECT nombre, correo_electronico, user_password FROM usuario WHERE correo_electronico = '"+loginMail+"' AND user_password = '"+loginPassword+"'";
 
