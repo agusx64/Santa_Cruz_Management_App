@@ -38,7 +38,19 @@ app.use(express.urlencoded({extended:false}));
 
 app.post("/Start", function(req, res){
     res.render('login');
-})
+});
+
+app.post("/home", function(req, res){
+    res.render('homepage');
+});
+
+app.post("/calendar", function(req, res){
+    res.render('calendar')
+});
+
+app.post("/settings", function(req, res){
+    res.render('settings')
+});
 
 // POST del Directorio de formulario de registro de usuarios "agregar_correo.html"
 app.post("/register", function(req, res) {
