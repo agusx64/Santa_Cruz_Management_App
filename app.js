@@ -62,6 +62,20 @@ app.post("/settings", function(req, res){
     res.render('configuracion')
 });
 
+app.post("/pacientes", function(req, res){
+    let listapacientes = "SELECT * from pacientes ORDER BY id_paciente DESC LIMIT 10";
+    conection.query(listapacientes, function(error, pacienteslista) {
+        if(error){
+            throw error;
+        }
+        else{
+            console.log(pacienteslista);
+            // res.json(pacienteslista);
+            res.render('listado_pacientes', { pacienteslista });
+        }
+    });
+});
+
 // POST del Directorio de formulario de registro de usuarios "agregar_correo.html"
 app.post("/register", function(req, res) {
 
