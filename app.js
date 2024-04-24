@@ -2,6 +2,7 @@
 const mysql = require("mysql");
 const express = require("express");
 const ejs_engine = require('ejs');
+let nameUserInsert;
 
 //Conexion a la base de datos--------------------------------------------------------------------------------------------------
 let conection = mysql.createConnection({
@@ -41,15 +42,24 @@ app.post("/Start", function(req, res){
 });
 
 app.post("/home", function(req, res){
-    res.render('homepage');
+    if(nameUserInsert == 'Administrador'){
+        res.render('administrador');
+    }
+    else{
+        res.render('homepage', { nameUserInsert });
+    }
+});
+
+app.post("/pharmacy", function(req, res) {
+    res.render('farmacia')
 });
 
 app.post("/calendar", function(req, res){
-    res.render('calendar')
+    res.render('calendario')
 });
 
 app.post("/settings", function(req, res){
-    res.render('settings')
+    res.render('configuracion')
 });
 
 // POST del Directorio de formulario de registro de usuarios "agregar_correo.html"
@@ -293,13 +303,14 @@ app.post("/validate_login", function(req, res) {
 
                 if(results.length > 0) {
 
-                    if( results[0].nombre === "admin" && results[0].user_password === "admin") {
+                    nameUserInsert = results[0].nombre
+                    if( results[0].correo_electronico == 'admin' && results[0].user_password == 'admin') {
 
-                        res.render('administrador', {nameUserInsert});
+                        res.render('administrador');
+                        console.log("Sesion iniciada, bienvenido usuario "+nameUserInsert+"'");
 
                     } else {
 
-                        let nameUserInsert = results[0].nombre
                         res.render('homepage', { nameUserInsert });
                         console.log("Sesion iniciada, bienvenido '"+nameUserInsert+"'");
 
