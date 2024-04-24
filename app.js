@@ -282,14 +282,21 @@ app.post("/validate_login", function(req, res) {
 
                 if(results.length > 0) {
 
-                    let nameUserInsert = results[0].nombre
-                    res.render('homepage', { nameUserInsert });
-                    console.log("Sesion iniciada, bienvenido '"+nameUserInsert+"'");
+                    if( results[0].nombre === "admin" && results[0].user_password === "admin") {
+
+                        res.render('administrador', {nameUserInsert});
+
+                    } else {
+
+                        let nameUserInsert = results[0].nombre
+                        res.render('homepage', { nameUserInsert });
+                        console.log("Sesion iniciada, bienvenido '"+nameUserInsert+"'");
+
+                    }
                     
-    
                 } else {
                     //Ventana emergente de credenciales ivalidas
-                res.redirect("/Mensajes/CredencialesInvalidas.html");
+                    res.redirect("/Mensajes/CredencialesInvalidas.html");
                     console.log("Credenciales invalidas");
 
                 }
