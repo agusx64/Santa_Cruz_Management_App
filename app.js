@@ -63,7 +63,7 @@ app.post("/settings", function(req, res){
 });
 
 app.post("/pacientes", function(req, res){
-    let listapacientes = "SELECT * from pacientes ORDER BY id_paciente DESC LIMIT 10";
+    let listapacientes = "SELECT * from pacientes ORDER BY id_paciente DESC";
     conection.query(listapacientes, function(error, pacienteslista) {
         if(error){
             throw error;
@@ -72,6 +72,20 @@ app.post("/pacientes", function(req, res){
             console.log(pacienteslista);
             // res.json(pacienteslista);
             res.render('listado_pacientes', { pacienteslista });
+        }
+    });
+});
+
+app.post("/personal", function(req, res){
+    let listapersonal = "SELECT * from personal ORDER BY id_personal DESC";
+    conection.query(listapersonal, function(error, personallista) {
+        if(error){
+            throw error;
+        }
+        else{
+            console.log(personallista);
+            // res.json(pacienteslista);
+            res.render('listado_personal', { personallista });
         }
     });
 });
