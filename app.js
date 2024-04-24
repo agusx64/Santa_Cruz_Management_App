@@ -266,7 +266,6 @@ app.post("/validate_login", function(req, res) {
 
     let loginMail = html_body_login.input_mail;
     let loginPassword = html_body_login.input_password;
-    let mensaje = html_body_login.TXTMSG;
 
     let compareDataonDB = "SELECT nombre, correo_electronico, user_password FROM usuario WHERE correo_electronico = '"+loginMail+"' AND user_password = '"+loginPassword+"'";
 
@@ -282,14 +281,15 @@ app.post("/validate_login", function(req, res) {
 
                 if(results.length > 0) {
 
-                    if( results[0].nombre === "admin" && results[0].user_password === "admin") {
+                    let nameUserInsert = results[0].nombre
+                    if( results[0].correo_electronico == 'admin' && results[0].user_password == 'admin') {
 
                         res.render('administrador', {nameUserInsert});
+                        console.log("Sesion iniciada, bienvenido usuario "+nameUserInsert+"'");
 
                     } else {
 
-                        let nameUserInsert = results[0].nombre
-                        res.render('homepage', { nameUserInsert });
+                        res.render('homepage', { nameUserInsert, usersList });
                         console.log("Sesion iniciada, bienvenido '"+nameUserInsert+"'");
 
                     }
