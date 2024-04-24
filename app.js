@@ -2,7 +2,6 @@
 const mysql = require("mysql");
 const express = require("express");
 
-
 //Conexion a la base de datos--------------------------------------------------------------------------------------------------
 let conection = mysql.createConnection({
     host: "localhost",
@@ -66,8 +65,9 @@ app.post("/register", function(req, res) {
 
             if(results.length > 0) {
 
-                console.log("Ya existe un usario con ese nombre")
                 // Agregar ventana emergente
+                res.redirect("/Mensajes/NombreUsuarioExistente.html");
+                console.log("Ya existe un usario con ese nombre")
 
             } else  { 
 
@@ -86,19 +86,17 @@ app.post("/register", function(req, res) {
                             throw error;
                 
                         } else {
-                
                             console.log("Datos almacenados en santacruzdb");
                             //Ventana emegente de usuario creado
-                
+                            res.redirect("/Mensajes/UsuarioAgregado.html");
                         }
                 
                     });
             
                 } else {
-
-                    console.log("Los campos no deben vacios")
                     //Ventana emergante de datos vacion
-            
+                    console.log("Los campos no deben vacios");
+                    res.redirect("/Mensajes/CamposVacios.html");
                 }
 
             }
@@ -151,19 +149,17 @@ app.post("/child_register", function(req, res) {
                     throw error;
         
                 } else {
-        
-                    console.log("Datos de infante almacenados en santacruzdb");
                     //Ventana emergante de llenado correcto
-        
+                    console.log("Datos de infante almacenados en santacruzdb");
+                    res.redirect("/Mensajes/InfanteAgregado.html");
                 }
         
             });
 
         } else {
-
-            console.log("Se deben de llenar todos los campos del formulario");
             //Advertencia de datos incompletos
-
+            console.log("Se deben de llenar todos los campos del formulario");
+            res.redirect("/Mensajes/CamposVacios.html");
         };
 
 });
@@ -204,18 +200,17 @@ app.post("/patient_register", function(req, res) {
                     throw error;
 
                 } else {
-
-                    console.log("Datos almacenados correctamente en santacruzdb");
                     //Ventana emegernte de datos almacenados de forma correcta
-
+                    console.log("Datos almacenados correctamente en santacruzdb");
+                    res.redirect("/Mensajes/PacienteAgregado.html");
                 }
 
             });
 
         } else {
-
+            //Mensaje emergente
             console.log("No se han llenado todos los campos");
-
+            res.redirect("/Mensajes/CamposVacios.html");
         }
 
 });
@@ -248,19 +243,19 @@ app.post("/register_personal", function(req, res) {
                     throw error;
 
                 } else {
-
+                    res.redirect("/Mensajes/PersonalAgregado.html");
                     console.log("Los datos se insertaron correctamente");
-
                 }
 
             });
 
         } else {
-
+            res.redirect("/Mensajes/CamposVacios.html");
             console.log("No se han llenado todos los campos");
 
         }
 });
+
 
 //POST  de solcitud de login
 app.post("/validate_login", function(req, res) {
@@ -270,6 +265,7 @@ app.post("/validate_login", function(req, res) {
 
     let loginMail = html_body_login.input_mail;
     let loginPassword = html_body_login.input_password;
+    let mensaje = html_body_login.TXTMSG;
 
     let compareDataonDB = "SELECT nombre, correo_electronico, user_password FROM usuario WHERE correo_electronico = '"+loginMail+"' AND user_password = '"+loginPassword+"'";
 
@@ -291,15 +287,15 @@ app.post("/validate_login", function(req, res) {
                     
     
                 } else {
-
                     //Ventana emergente de credenciales ivalidas
+                res.redirect("/Mensajes/CredencialesInvalidas.html");
                     console.log("Credenciales invalidas");
 
                 }
 
             } else {
-
                 //Ventana emergente de campos vacios
+                res.redirect("/Mensajes/CamposVacios.html");
                 console.log("No has llenado todos los campos");
 
             }
