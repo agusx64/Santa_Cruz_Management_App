@@ -1,6 +1,7 @@
 //Modulos de la aplicacion y librerias----------------------------------------------------------------------------------------
 const mysql = require("mysql");
 const express = require("express");
+const ejs_engine = require('ejs');
 
 //Conexion a la base de datos--------------------------------------------------------------------------------------------------
 let conection = mysql.createConnection({
@@ -26,7 +27,7 @@ const app = express();
 //Ruta de archivos estaticos y middleware-------------------------------------------------------------------------------------
 
 app.set("view engine", "ejs");
-app.use(express.static('public'));
+app.use(express.static('views'));
 app.get("/", function(err, res){
     res.render("index");
 });
@@ -36,7 +37,7 @@ app.use(express.urlencoded({extended:false}));
 //Declaracion de directorios
 
 app.post("/Start", function(req, res){
-    res.redirect("/login/login.html");
+    res.render('login');
 })
 
 // POST del Directorio de formulario de registro de usuarios "agregar_correo.html"
@@ -282,7 +283,7 @@ app.post("/validate_login", function(req, res) {
                 if(results.length > 0) {
 
                     let nameUserInsert = results[0].nombre
-                    res.redirect("/homepage/homepage.html");
+                    res.render('homepage', { nameUserInsert });
                     console.log("Sesion iniciada, bienvenido '"+nameUserInsert+"'");
                     
     
