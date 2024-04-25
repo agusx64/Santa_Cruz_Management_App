@@ -307,6 +307,40 @@ app.post("/register_personal", function(req, res) {
         }
 });
 
+app.post("/farmacia", function(req, res){
+    let listaMedicamento = "SELECT * from medicamentos ORDER BY id_medicamento DESC";
+    conection.query(listaMedicamento, function(error, medicamentoLista) {
+        if(error){
+            throw error;
+        }
+        else{
+            console.log(medicamentoLista);
+            // res.json(pacienteslista);
+            res.render('listado_medicamentos', { medicamentoLista });
+        }
+    });
+});
+
+app.post("/listado_instrumentos", function(req, res) {
+
+    let listaInstrumento = "SELECT * FROM instrumentos ORDER BY codigo";
+    conection.query(listaInstrumento, function(error, instrumentoLista) {
+
+        if(error) {
+
+            throw error;
+
+        } else {
+
+            console.log(instrumentoLista);
+            res.render('listado_instrumentos', { instrumentoLista })
+
+        }
+
+    });
+
+});
+
 
 //POST  de solcitud de login
 app.post("/validate_login", function(req, res) {

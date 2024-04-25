@@ -173,6 +173,11 @@ body{
 #agregate_personal_span{
     font-size: 18px;
     font-weight: 500;
+    background-color: none;
+    border: 0;
+    background: none;
+    color: blueviolet;
+    text-decoration: underline;
 }
 
 .medical_buttons{
