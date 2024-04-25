@@ -192,6 +192,7 @@ body{
     fill: var(--Blue);
     margin-bottom: 20px;
     width: 100%;
+    width: 100%;
 }
 
 .ListIcon{
@@ -211,6 +212,8 @@ body{
     font-weight: bolder;
     margin: 0;
     width: 50%;
+    font-family: "Poppins";
+    color: var(--Blue);
     font-family: "Poppins";
     color: var(--Blue);
 }
