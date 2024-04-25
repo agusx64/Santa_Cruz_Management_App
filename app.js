@@ -321,24 +321,18 @@ app.post("/farmacia", function(req, res){
     });
 });
 
-app.post("/listado_instrumentos", function(req, res) {
-
-    let listaInstrumento = "SELECT * FROM instrumentos ORDER BY codigo";
+app.post("/lista", function(req, res){
+    let listaInstrumento = "SELECT * from instrumentos ORDER BY codigo DESC";
     conection.query(listaInstrumento, function(error, instrumentoLista) {
-
-        if(error) {
-
+        if(error){
             throw error;
-
-        } else {
-
-            console.log(instrumentoLista);
-            res.render('listado_instrumentos', { instrumentoLista })
-
         }
-
+        else{
+            console.log(instrumentoLista);
+            // res.json(pacienteslista);
+            res.render('listado_instrumentos', { instrumentoLista });
+        }
     });
-
 });
 
 
