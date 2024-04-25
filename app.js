@@ -365,7 +365,7 @@ app.post("/farmacia", function(req, res){
     });
 });
 
-app.post("/lista", function(req, res){
+app.post("/listado_instrumentos", function(req, res){
     let listaInstrumento = "SELECT * from instrumentos ORDER BY codigo DESC";
     conection.query(listaInstrumento, function(error, instrumentoLista) {
         if(error){
