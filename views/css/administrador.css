@@ -305,3 +305,9 @@ body{
     width: 30px;
     transition: all 0.5s ease;
 }
+
+.ButtonContainer{
+    background-color: rgba(0, 0, 255, 0);
+    color: none;
+    border: none;
+}
