@@ -62,6 +62,32 @@ app.post("/settings", function(req, res){
     res.render('configuracion')
 });
 
+app.post("/DetallesPaciente", function(req, res){
+    res.render("datos_paciente")
+});
+
+app.post("/DetallesPersonal", function(req, res){
+    res.render("datos_trabajador")
+});
+
+app.post("/DetallesMedicamento", function(req, res){
+    res.render('detalles_medicamentos')
+});
+
+app.post("/listado_infantes", function(req, res){
+    let listaInfante = "SELECT * from infantes ORDER BY id_infante DESC";
+    conection.query(listaInfante, function(error, infanteLista) {
+        if(error){
+            throw error;
+        }
+        else{
+            console.log(infanteLista);
+            // res.json(pacienteslista);
+            res.render('listado_infantes', { infanteLista });
+        }
+    });
+});
+
 app.post("/pacientes", function(req, res){
     let listapacientes = "SELECT * from pacientes ORDER BY id_paciente DESC";
     conection.query(listapacientes, function(error, pacienteslista) {
