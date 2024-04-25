@@ -12,6 +12,8 @@ let conection = mysql.createConnection({
     password: "",
 });
 
+
+
 //Comprobacion de la base de datos
 conection.connect(function (err) {
     if (err) {
@@ -39,6 +41,22 @@ app.use(express.urlencoded({extended:false}));
 
 app.post("/Start", function(req, res){
     res.render('login');
+});
+
+app.post("/AgregarUsuario", function(req,res){
+    res.render('agregar_correo')
+});
+
+app.post("/AgregarPersonal", function(req,res){
+    res.render('agregar_personal')
+});
+
+app.post("/AgregarPaciente", function(req,res){
+    res.render('agregar_paciente')
+});
+
+app.post("/AgregarInfante", function(req,res){
+    res.render('agregar_infante')
 });
 
 app.post("/home", function(req, res){
